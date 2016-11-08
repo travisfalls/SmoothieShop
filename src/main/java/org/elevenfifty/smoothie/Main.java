@@ -26,7 +26,7 @@ public class Main {
 		
 		
 		//Decorator Pattern Example
-		Smoothie s = new Smoothie(context.getBean("orange", Ingredient.class));
+		Smoothie s = new Smoothie(context.getBean("strawberry", Ingredient.class));
 		s = new Smoothie(context.getBean("banana", Ingredient.class), s);
 
 		logger.info(printPretty("Ingredients:", s.getIngredients()));
@@ -38,6 +38,7 @@ public class Main {
 	}
 	
 	private static String printPretty(String preamble, List<? extends Object> lines){
+		System.out.println("");
 		StringBuffer b = new StringBuffer(preamble);
 		b.append("\n");
 		for(Object line : lines){
