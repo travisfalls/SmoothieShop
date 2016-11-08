@@ -9,7 +9,7 @@
 	   					   http://www.springframework.org/schema/util
 	   					   http://www.springframework.org/schema/util/spring-util-4.1.xsd">
 	   					   
-	<bean id="orange" class="org.elevenfifty.smoothie.beans.Produce" scope="prototype">
+	<bean id="orange" class="org.elevenfifty.smoothie.beans.Produce" scope="singleton">
 		<property name="name" value="Orange"/>
 		<property name="cost" value="0.5"/>
 		<property name="type" value="FRUIT"/>
