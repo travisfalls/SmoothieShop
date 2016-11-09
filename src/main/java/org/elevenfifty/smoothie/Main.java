@@ -38,7 +38,6 @@ public class Main {
 	}
 	
 	private static String printPretty(String preamble, List<? extends Object> lines){
-
 		StringBuffer b = new StringBuffer(preamble);
 		b.append("\n");
 		for(Object line : lines){
