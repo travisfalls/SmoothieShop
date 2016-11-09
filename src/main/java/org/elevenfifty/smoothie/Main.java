@@ -26,7 +26,7 @@ public class Main {
 		
 		
 		//Decorator Pattern Example
-		Smoothie s = new Smoothie(context.getBean("oranges", Ingredient.class));
+		Smoothie s = new Smoothie(context.getBean("orange", Ingredient.class));
 		s = new Smoothie(context.getBean("banana", Ingredient.class), s);
 
 		logger.info(printPretty("Ingredients:", s.getIngredients()));
