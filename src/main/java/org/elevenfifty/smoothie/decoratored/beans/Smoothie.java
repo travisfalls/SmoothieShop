@@ -62,4 +62,11 @@ public class Smoothie implements Item {
 	public String getName() {
 		return name;
 	}
+	
+	@Override
+	public void consumeIngredients() {
+		for (Ingredient in : getIngredients()) {
+			in.setQuantity(in.getQuantity() - 1);
+		}
+	}
 }

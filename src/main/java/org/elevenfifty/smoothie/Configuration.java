@@ -64,6 +64,7 @@ public class Configuration {
 				}
 				ingredient.setName(row.get("Name"));
 				ingredient.setCost(Double.valueOf(row.get("Cost")));
+				ingredient.setQuantity(Integer.valueOf(row.get("Quantity")));
 				ingredient.setType(Type.valueOf(row.get("Type")));
 				ingredientMap.put(ingredient.getName(), ingredient);
 				ingredients.add(ingredient);

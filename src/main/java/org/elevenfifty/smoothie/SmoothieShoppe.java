@@ -6,7 +6,7 @@ import org.elevenfifty.smoothie.beans.Recipe;
 import org.elevenfifty.smoothie.decoratored.beans.Smoothie;
 import org.elevenfifty.smoothie.util.PrettyPrinter;
 
-public class Main {
+public class SmoothieShoppe {
 	public static void main(String[] args) throws IOException {
 		Configuration config = Configuration.configure("recipes.csv", "ingredients.csv");
 
@@ -23,7 +23,9 @@ public class Main {
 		
 		Browser browser = new Browser(config);
 		browser.displayRecipes();
-		PrettyPrinter.print(browser.readRecipe());
+		Recipe selectedRecipe = browser.readRecipe();
+		selectedRecipe.consumeIngredients();
+		PrettyPrinter.print(selectedRecipe);
 		
 	}
 
